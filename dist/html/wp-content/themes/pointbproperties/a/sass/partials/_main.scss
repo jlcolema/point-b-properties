@@ -1,0 +1,623 @@
+
+/*-------------------------------------------
+	Main
+-------------------------------------------*/
+
+
+#main {}
+
+	.sub-section {
+
+		margin: 0 0 22px 0;
+		border-bottom: 1px solid rgb(214, 214, 214);
+
+		.title {
+
+			margin-bottom: (10/18) + em;
+			@include font-size(18);
+			line-height: (25/18) + em;
+			@include proxima-nova-bold;
+			text-transform: uppercase;
+			color: $blue;
+
+		}
+
+	}
+
+	/* Images */
+
+	.alignleft {
+
+		#content & {
+
+			float: left;
+			margin: 0 20px 0 0;
+
+		}
+
+	}
+
+	.alignright {
+
+		#content & {}
+
+	}
+
+	/* Project List */
+
+	.projects {
+
+		ul {
+
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+		}
+
+			li {
+
+				margin: 0 0 20px 0;
+				color: rgb(134, 134, 134);
+				background: $white;
+				@include box-shadow(0 1px 3px rgba($black, 0.12));
+
+				@media screen and (min-width: 700px) {
+
+					padding: 10px;
+					border: 1px solid rgb(214, 214, 214);
+
+				}
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+				.inner-wrap {
+
+					@media screen and (min-width: 700px) {
+
+						@include group;
+
+					}
+
+				}
+
+					.thumbnail {
+
+						@media screen and (min-width: 700px) {
+
+							float: left;
+							width: 30%;
+
+						}
+
+						a {
+
+							&:hover {}
+
+						}
+
+							img {}
+
+							.type {
+
+								padding: 10px 10px 8px 10px;
+								@include font-size(12);
+								line-height: (16/12) + em;
+								@include proxima-nova-bold;
+								text-align: center;
+								text-transform: uppercase;
+								color: $white;
+								background: $blue;
+
+							}
+
+					}
+
+					.detail {
+
+						position: relative;
+						padding: 15px;
+						border: 1px solid rgb(214, 214, 214);
+						border-top: none;
+						@include group;
+
+						@media screen and (min-width: 700px) {
+
+							float: left;
+							width: 70%;
+							padding: 15px 15px 15px 25px;
+							border: none;
+
+						}
+
+					}
+
+						.location {
+
+							margin: 0 0 15px 0;
+
+						}
+
+							.street {
+
+								@include font-size(24);
+								line-height: (30/24) + em;
+								@include proxima-nova-semibold;
+
+								a {
+
+									color: $blue;
+
+									&:hover {}
+
+								}
+
+							}
+
+							.city {}
+
+							.state {}
+
+						.availability {
+
+							margin: 0 0 10px 0;
+							@include group;
+
+							@media screen and (min-width: 580px) and (max-width: 699px), screen and (min-width: 900px) {
+
+								position: absolute;
+								right: 15px;
+								top: 15px;
+								z-index: 1;
+
+							}
+
+						}
+
+							.price {
+
+								float: left;
+								margin: 0 7px 0 0;
+								@include font-size(22);
+								line-height: (30/22) + em;
+								@include proxima-nova-semibold;
+								color: $blue;
+
+							}
+
+							.for {
+
+								float: left;
+								position: relative;
+								top: 4px;
+								margin: 0 0 7px 0;
+								padding: 3px 6px 2px 6px;
+								@include font-size(10);
+								line-height: (14/10) + em;
+								@include proxima-nova-bold;
+								text-align: center;
+								text-transform: uppercase;
+								color: $white;
+								background: $blue;
+								@include border-radius(3px);
+
+							}
+
+						.description {
+
+							margin: 0 0 23px 0;
+
+							p {
+
+								&:last-of-type {
+
+									margin: 0;
+
+								}
+
+							}
+
+						}
+
+						.amenities {
+
+							margin: 0 0 25px 0;
+							@include proxima-nova-semibold;
+							color: rgb(172, 172, 172);
+							background: rgb(248, 248, 248);
+							border: 1px solid rgb(214, 214, 214);
+							@include group;
+
+							@media screen and (min-width: 460px) {
+
+								display: inline-block;
+								margin: 0;
+
+							}
+
+						}
+
+							.beds {
+
+								float: left;
+								padding: 7px 20px;
+								border-right: 1px solid rgb(214, 214, 214);
+
+							}
+
+							.baths {
+
+								float: left;
+								padding: 7px 20px;
+
+							}
+
+						.more {
+
+							@include font-size(15);
+							line-height: (23/15) + em;
+							@include proxima-nova-bold;
+							text-transform: uppercase;
+
+							@media screen and (min-width: 580px) and (max-width: 699px), screen and (min-width: 900px) {
+
+								float: right;
+
+							}
+
+							a {
+
+								display: inline-block;
+								padding: 6px 15px;
+								color: $white;
+								background: $green;
+								border: 1px solid rgb(91, 135, 35);
+								@include border-radius(3px);
+								text-decoration: none;
+
+								&:hover {}
+
+							}
+
+						}
+
+	}
+
+	/* Individual Destination */
+
+	.single-destination {
+
+		// Samples
+
+		#samples {
+
+			margin: 0 0 20px 0;
+			background: $white;
+
+			.flexslider {
+
+				position: relative;
+
+			}
+
+				.slides {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {}
+
+						img {}
+
+				}
+
+				.flex-control-nav {
+
+					margin: 0;
+					padding: 0 15%;
+					list-style: none;
+					@include group;
+					border: 1px solid rgb(214, 214, 214);
+					border-top: none;
+
+					li {
+
+						float: left;
+						width: 25%;
+						margin: 7px 0;
+						padding: 7px;
+						cursor: pointer;
+
+					}
+
+						img {
+
+							opacity: 0.50;
+
+							&:hover {
+
+								opacity: 0.65;
+
+							}
+
+						}
+
+						.flex-active {
+
+							opacity: 1;
+
+						}
+
+				}
+
+				.flex-direction-nav {
+
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li {
+
+						position: absolute;
+						bottom: 0;
+						width: 15%;
+						@include hide-text;
+						z-index: 5;
+
+						&:first-of-type {
+
+							left: 0;
+
+						}
+
+						&:last-of-type {
+
+							right: 0;
+
+						}
+
+					}
+
+						a {
+
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							width: 27px;
+							height: 27px;
+							background: $white url(../img/sample-nav.svg);
+							background-size: 50px 25px;
+							border: 1px solid rgb(204, 204, 204);
+							@include border-radius(3px);
+
+							.no-svg & {
+
+								background-image: url(../img/sample-nav.png);
+
+							}
+
+							&:hover {}
+
+						}
+
+						.flex-prev {
+
+							margin: -14px 0 0 -7px;
+
+						}
+
+						.flex-next {
+
+							margin: -14px 0 0 -17px;
+							background-position: -25px 0;
+
+						}
+
+				}
+
+		}
+
+		// Details
+
+		.detail {
+
+			margin: 0 0 30px 0;
+
+			@media screen and (min-width: 900px) {
+
+				position: relative;
+
+			}
+
+			.location {
+
+				margin: 0 0 15px 0;
+
+			}
+
+				.street {
+
+					@include font-size(24);
+					line-height: (30/24) + em;
+					@include proxima-nova-semibold;
+					color: $blue;
+
+				}
+
+				.city {}
+
+				.state {}
+
+			.availability {
+
+				margin: 0 0 15px 0;
+				@include group;
+
+				@media screen and (min-width: 900px) {
+
+					position: absolute;
+					right: 0;
+					top: 0;
+					margin: 0;
+					z-index: 1;
+
+				}
+
+			}
+
+				.price {
+
+					float: left;
+					margin: 0 7px 0 0;
+					@include font-size(22);
+					line-height: (30/22) + em;
+					@include proxima-nova-semibold;
+					color: $blue;
+
+				}
+
+				.for {
+
+					float: left;
+					position: relative;
+					top: 4px;
+					margin: 0 0 7px 0;
+					padding: 3px 6px 2px 6px;
+					@include font-size(10);
+					line-height: (14/10) + em;
+					@include proxima-nova-bold;
+					text-align: center;
+					text-transform: uppercase;
+					color: $white;
+					background: $blue;
+					@include border-radius(3px);
+
+				}
+
+			.description {
+
+				p {
+
+					&:last-of-type {
+
+						// margin: 0;
+
+					}
+
+				}
+
+			}
+
+		}
+
+		.floor-plan {
+
+			margin: 0 0 40px 0;
+
+			.more {
+
+				@include font-size(20);
+				line-height: (24/20) + em;
+				@include proxima-nova-bold;
+				text-transform: uppercase;
+
+				a {
+
+					position: relative;
+					display: inline-block;
+					padding: 10px 70px 10px 20px;
+					color: $white;
+					background: $green;
+					text-decoration: none;
+					border: 1px solid rgb(91, 135, 35);
+					@include border-radius(3px);
+
+					&:hover {}
+
+				}
+
+					.arrow {
+
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 50px;
+						height: 100%;
+						background: url(../img/floor-plan.svg) center center no-repeat;
+						background-size: 30px 30px;
+						border-left: 1px solid rgb(91, 135, 35);
+						@include hide-text;
+						z-index: 1;
+
+						.no-svg & {
+
+							background-image: url(../img/floor-plan.png);
+
+						}
+
+					}
+
+			}
+
+		}
+
+		.map {
+
+			.sub-section {
+
+				position: relative;
+
+				.more {
+
+					position: absolute;
+					right: 0;
+					top: 0;
+					z-index: 1;
+
+				}
+
+					a {
+
+						display: block;
+						padding: 3px 6px 2px 6px;
+						@include font-size(10);
+						line-height: (14/10) + em;
+						@include proxima-nova-bold;
+						text-align: center;
+						text-transform: uppercase;
+						color: $white;
+						background: $blue;
+						@include border-radius(3px);
+						text-decoration: none;
+
+						&:hover {}
+
+					}
+
+			}
+
+			.acf-map {
+
+				width: 100%;
+				max-width: 100%;
+				height: 300px;
+				border: 1px solid rgb(204, 204, 204);
+
+				@media screen and (min-width: 750px) {
+
+					height: 400px;
+
+				}
+
+			}
+
+		}
+
+	}

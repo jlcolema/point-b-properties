@@ -1,0 +1,88 @@
+
+/*-------------------------------------------
+	Layouts
+-------------------------------------------*/
+
+
+html {}
+
+body {
+
+	&#projects,
+	&#destinations,
+	&.single-destination,
+	&#contact {
+
+		background: rgb(245, 245, 245);
+
+	}
+
+}
+
+	#header {}
+
+	#content {
+
+		padding: 30px 0;
+		@include group;
+
+		@media screen and (min-width: 750px) {
+
+			padding: 50px 0;
+
+		}
+
+		.wrap {
+
+			@media screen and (min-width: 750px) {
+
+				@include group;
+
+			}
+
+		}
+
+	}
+
+		#main {
+
+			margin: 0 0 30px 0;
+
+			@media screen and (min-width: 750px) {
+
+				float: left;
+				width: 65%;
+				margin: 0;
+
+			}
+
+			#home &,
+			#projects &,
+			#destinations & {
+
+				margin: 0;
+
+				@media screen and (min-width: 750px) {
+
+					float: none;
+					width: auto;
+
+				}
+
+			}
+
+		}
+
+		#secondary {
+
+			@media screen and (min-width: 750px) {
+
+				float: right;
+				width: 35%;
+				padding: 0 0 0 36px;
+
+			}
+
+		}
+
+	#footer {}

@@ -1,0 +1,268 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	position: relative;
+	padding: 20px 0 0 0;
+	background: $white;
+	// @include box-shadow(0 1px 15px rgba($black, 0.35));
+	z-index: 5;
+
+	@media screen and (min-width: 820px) {
+
+		padding: 20px 0;
+
+	}
+
+	.wrap {
+
+		@media screen and (min-width: 820px) {
+
+			position: relative;
+
+		}
+
+	}
+
+}
+
+		/* Logo */
+
+		#logo {
+
+			position: relative;
+			left: -10px;
+			width: 180px;
+			@include hide-text;
+
+			a {
+
+				display: block;
+				width: 180px;
+				height: 60px;
+				background: url(../img/logo.svg);
+
+				.no-svg & {
+
+					background: url(../img/logo.png);
+
+				}
+
+				&:hover {}
+
+			}
+
+		}
+
+		/* Energy Star Partner */
+
+		.energy-star-partner {
+
+			display: none;
+			position: absolute;
+			left: 200px;
+			top: 50%;
+			margin-top: -30px;
+			@include hide-text;
+			z-index: 5;
+
+			@media screen and (min-width: 460px) {
+
+				display: block;
+				left: 210px;
+
+			}
+
+			span {
+
+				display: block;
+				width: 50px;
+				height: 60px;
+				background: url(../img/energy-star-partner.svg);
+				background-size: 50px 60px;
+
+			}
+
+		}
+
+		/* Indoor Air Plus */
+
+		.indoor-air-plus {
+
+			display: none;
+			position: absolute;
+			left: 260px;
+			top: 50%;
+			margin-top: -24px;
+			@include hide-text;
+			z-index: 5;
+
+			@media screen and (min-width: 460px) {
+
+				display: block;
+				left: 270px;
+
+			}
+
+			span {
+
+				display: block;
+				width: 50px;
+				height: 50px;
+				background: url(../img/indoor-air-plus.png);
+				background-size: 50px 50px;
+
+			}
+
+		}
+
+		/* Nav */
+
+		#nav {
+
+			padding: 0 0 20px 0;
+
+			@media screen and (min-width: 820px) {
+
+				position: absolute;
+				top: 50%;
+				right: 0;
+				margin: -20px 0 0 0;
+				z-index: 1;
+
+			}
+
+			.toggle {
+
+				position: absolute;
+				top: 32px;
+				right: 20px;
+				@include font-size(14);
+				line-height: (20/14) + em;
+				@include proxima-nova-semibold;
+				text-transform: uppercase;
+				color: $white;
+				background: $blue;
+				@include border-radius(3px);
+				z-index: 5;
+
+				@media screen and (min-width: 820px) {
+
+					display: none;
+
+				}
+
+			}
+
+				span {
+
+					display: block;
+					height: 36px;
+					padding: 8px 14px 0 34px;
+					background: url(../img/nav-toggle.svg) 11px 9px no-repeat;
+					background-size: 16px 16px;
+					cursor: pointer;
+
+				}
+
+			ul {
+
+				display: none;
+				margin: 20px 0 0 0;
+				padding: 0;
+				list-style: none;
+				border-top: 1px solid rgb(214, 214, 214);
+
+				@media screen and (min-width: 820px) {
+
+					display: block;
+					margin: 0;
+					border: none;
+					@include group;
+
+				}
+
+				&.open {
+
+					display: block;
+
+				}
+
+			}
+
+				li {
+
+					@include font-size(18);
+					line-height: (25/18) + em;
+					@include proxima-nova-semibold;
+					text-transform: uppercase;
+					text-align: center;
+					border-bottom: 1px solid rgb(214, 214, 214);
+
+					@media screen and (min-width: 820px) {
+
+						float: left;
+						border: none;
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						height: 40px;
+						padding: 8px 10px 0 10px;
+						color: rgb(134, 134, 134);
+						text-decoration: none;
+
+						@media screen and (min-width: 820px) {
+
+							padding: 8px 20px 0 20px;
+
+						}
+
+						&:hover {
+
+							color: $blue;
+
+						}
+
+					}
+
+				/* Current Menu Item */
+
+				.current-menu-item {
+
+					a {
+
+						color: $blue;
+
+						&:hover {}
+
+					}
+
+				}
+
+				.single-destination & {
+
+					#menu-item-117,
+					#menu-item-120 {
+
+						a {
+
+							color: $blue;
+
+							&:hover {}
+
+						}
+
+					}
+
+				}
+
+		}

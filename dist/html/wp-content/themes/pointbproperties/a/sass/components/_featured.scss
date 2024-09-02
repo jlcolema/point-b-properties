@@ -1,0 +1,272 @@
+
+/*-------------------------------------------
+	Featured
+-------------------------------------------*/
+
+
+#featured {
+
+	background: $gray;
+
+	.wrap {
+
+		max-width: 960px;
+		padding: 0;
+
+	}
+
+		.flexslider {
+
+			position: relative;
+
+		}
+
+			.slides {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+
+					position: relative;
+
+				}
+
+			}
+
+					img {}
+
+					.overlay {
+
+						position: absolute;
+						left: 0;
+						bottom: 70px;
+						width: 100%;
+						z-index: 5;
+
+						@media screen and (min-width: 540px) {
+
+							// bottom: 40px;
+
+						}
+
+					}
+
+						.inner-overlay {
+
+							@include wrap;
+
+						}
+
+							.street {
+
+								display: inline-block;
+								padding: 10px 15px;
+								@include font-size(24);
+								line-height: (30/24) + em;
+								@include proxima-nova-regular;
+								color: $white;
+								background: rgba($blue, 0.85);
+
+								@media screen and (min-width: 540px) {
+
+									padding: 10px 20px;
+									@include font-size(36);
+									line-height: (42/36) + em;
+
+								}
+
+							}
+
+							.details {
+
+								width: 100%;
+								max-width: 540px;
+								color: $white;
+
+							}
+
+								.content {
+
+									margin: 0 0 20px 0;
+									padding: 10px 15px;
+
+									background: rgba($blue, 0.65);
+
+									@media screen and (min-width: 540px) {
+
+										padding: 15px 20px;
+										@include font-size(16);
+										line-height: (24/16) + em;
+
+									}
+
+									p {
+
+										&:last-of-type {
+
+											margin: 0;
+
+										}
+
+									}
+
+								}
+
+								.more {
+
+									@include font-size(18);
+									line-height: (24/18) + em;
+									@include proxima-nova-bold;
+									text-transform: uppercase;
+
+									a {
+
+										display: inline-block;
+										padding: 9px 15px 7px 15px;
+										color: $white;
+										background: $green;
+										text-decoration: none;
+										border: 1px solid rgb(91, 135, 35);
+										@include border-radius(3px);
+
+										&:hover {}
+
+									}
+
+								}
+
+			.flex-control-nav {
+
+				position: absolute;
+				left: 0;
+				bottom: 24px;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				text-align: center;
+				z-index: 5;
+
+				li {
+
+					display: inline-block;
+					margin: 0 7px;
+					@include hide-text;
+
+				}
+
+					a {
+
+						display: block;
+						width: 20px;
+						height: 20px;
+						background: $white;
+						background: rgba($white, 0.45);
+						border: 3px solid $white;
+						@include border-radius(50%);
+
+						&.flex-active {
+
+							background: $green;
+
+						}
+
+						&:hover {}
+
+					}
+
+			}
+
+			.flex-direction-nav {
+
+				display: none;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				@media screen and (min-width: 540px) {
+
+					display: block;
+
+				}
+
+				li {
+
+					position: absolute;
+					top: 50%;
+					height: auto !important;
+					margin-top: -25px;
+					@include hide-text;
+					z-index: 5;
+
+					&:first-of-type {
+
+						left: 0;
+
+					}
+
+					&:last-of-type {
+
+						right: 0;
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						width: 50px;
+						height: 50px;
+						background: $white;
+						background: rgba($white, 0.75) url(../img/featured-nav.svg) 0 0;
+						background-size: 100px 100px;
+
+						.no-svg & {
+
+							background-image: url(../img/featured-nav.png);
+
+						}
+
+						&.flex-prev {
+
+							&:hover {
+
+								background-position: 0 -50px;
+
+							}
+
+						}
+
+						&.flex-next {
+
+							background-position: -50px 0;
+
+							&:hover {
+
+								background-position: -50px -50px;
+
+							}
+
+						}
+
+						&.flex-disabled {
+
+							display: none;
+
+						}
+
+						&:hover {
+
+							background-color: $green;
+							background-color: rgba($green, 0.80);
+
+						}
+
+					}
+
+			}
+
+}

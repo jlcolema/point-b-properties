@@ -1,0 +1,146 @@
+
+/*-------------------------------------------
+	Services
+-------------------------------------------*/
+
+
+#services {
+
+	padding: 30px 0;
+	background: rgb(245, 245, 245);
+
+	@media screen and (min-width: 700px) {
+
+		padding: 30px 0 10px 0;
+
+	}
+
+	@media screen and (min-width: 750px) {
+
+		padding: 50px 0 30px 0;
+
+	}
+
+	.wrap {}
+
+		.header {
+
+			margin: 0 0 30px 0;
+
+			.title {
+
+				@include font-size(36);
+				line-height: (42/36) + em;
+				@include proxima-nova-regular;
+				text-align: center;
+				color: rgb(26, 26, 26);
+
+			}
+
+		}
+
+		.content {}
+
+			ul {
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				@media screen and (min-width: 700px) {
+
+					text-align: justify;
+					@include placeholder;
+
+				}
+
+			}
+
+				li {
+
+					margin: 0 0 30px 0;
+					@include font-size(18);
+					line-height: (25/18) + em;
+					text-align: center;
+					color: rgb(77, 77, 77);
+
+					@media screen and (min-width: 700px) {
+
+						display: inline-block;
+						width: 31%;
+						margin: 0;
+						text-align: center;
+						vertical-align: top;
+
+					}
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+					.icon {
+
+						display: block;
+						width: 120px;
+						height: 120px;
+						margin: 0 auto 20px auto;
+						background: rgb(230, 230, 230);
+						@include border-radius(50%);
+
+						@media screen and (min-width: 700px) {
+
+							width: 140px;
+							height: 140px;
+
+						}
+
+					}
+
+					.title {
+
+						margin-bottom: (10/18) + em;
+						@include proxima-nova-bold;
+						text-transform: uppercase;
+
+					}
+
+					.description {}
+
+						p {
+
+							&:last-of-type {
+
+								margin: 0;
+
+							}
+
+						}
+
+					.more {
+
+						@include font-size(18);
+						line-height: (24/18) + em;
+						@include proxima-nova-bold;
+						text-transform: uppercase;
+
+						a {
+
+							display: inline-block;
+							padding: 8px 16px 8px 16px;
+							color: $white;
+							background: $green;
+							text-decoration: none;
+							border: 1px solid rgb(91, 135, 35);
+							@include border-radius(3px);
+
+							&:hover {}
+
+						}
+
+					}
+
+				}
+
+}

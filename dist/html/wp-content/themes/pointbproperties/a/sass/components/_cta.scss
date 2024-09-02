@@ -1,0 +1,75 @@
+
+/*-------------------------------------------
+	CTA
+-------------------------------------------*/
+
+
+.cta {
+
+	padding: 20px 0;
+	background: $white;
+
+	@media screen and (min-width: 750px) {
+
+		padding: 50px;
+
+	}
+
+	.wrap {}
+
+		.inner-wrap {
+
+			text-align: center;
+			padding: 20px;
+			// background: rgb(234, 234, 234);
+			// border: 1px solid rgb(204, 204, 204);
+			@include border-radius(3px);
+
+		}
+
+			.headline {
+
+				margin-bottom: (12/30) + em;
+				@include font-size(30);
+				line-height: (36/30) + em;
+				@include proxima-nova-regular;
+				color: rgb(60, 60, 60);
+
+			}
+
+			.description {
+
+				color: rgb(60, 60, 60);
+
+				p {
+
+					&:hover {}
+
+				}
+
+			}
+
+			.more {
+
+				@include font-size(20);
+				line-height: (24/20) + em;
+				@include proxima-nova-bold;
+				text-transform: uppercase;
+
+				a {
+
+					display: inline-block;
+					padding: 10px 20px;
+					color: $white;
+					background: $green;
+					text-decoration: none;
+					border: 1px solid rgb(91, 135, 35);
+					@include border-radius(3px);
+
+					&:hover {}
+
+				}
+
+			}
+
+}
